@@ -21,6 +21,17 @@ A lightweight, self-hosted household chore management web app built for a home T
 
 ## Running on Your TinyPC
 
+### Option A: Docker Compose (Recommended)
+
+```bash
+docker compose up -d --build
+```
+
+- Exposes the app on `http://<tinypc-ip>:8001`
+- Persists the SQLite database in `./data/chores.db` on the host
+
+### Option B: Direct Node.js
+
 ```bash
 # Install dependencies
 npm install

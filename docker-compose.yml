@@ -1,0 +1,15 @@
+services:
+  chore-deck:
+    build: .
+    container_name: home-chore-deck
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    environment:
+      - NODE_ENV=production
+      - PORT=8001
+      - HOST=0.0.0.0
+      - DB_PATH=/app/data/chores.db
+      - TZ=${TZ:-America/New_York}
+    volumes:
+      - ./data:/app/data
